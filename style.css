@@ -1,8 +1,6 @@
 #container {
   display: flex;
-  width: 960px;
-  height: 960px;
-  border: 1px solid black;
+  justify-content: center;
 }
 
 .cell {
@@ -10,4 +8,21 @@
   border: 1px solid black;
   width: 20px;
   height: 20px;
+  justify-content: center;
+}
+
+.cell:hover {
+  background-color: black;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.pixel-size-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
