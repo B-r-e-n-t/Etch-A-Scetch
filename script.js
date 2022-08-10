@@ -1,39 +1,40 @@
 const container = document.getElementById("container");
-const cell = document.createElement("div");
-cell.classList.add("cell");
+const btn = document.getElementById('pixel-size-btn')
+
+let rowNum = 16;
 
 function makeGrid() {
-  makeRows(16);
+  container.innerHTML = '';
+  makeRows(rowNum);
+  
 }
 
 function makeRows(rowNum) {
-  for (let i = 1; i < rowNum; i++) {
+  for (let i = 0; i < rowNum; i++) {
     const row = document.createElement("div");
     row.classList.add("row");
-    makeColumns(16, row);
+    makeColumns(rowNum, row);
     container.appendChild(row);
   }
 }
 
 function makeColumns(rowNum, row) {
-  for (let i = 1; i < rowNum; i++) {
+  for (let i = 0; i < rowNum; i++) {
     const cell = document.createElement("div");
+    cell.addEventListener('mouseover', function() {
+    cell.style.backgroundColor = 'red';
+    });
     cell.classList.add("cell");
     row.appendChild(cell);
   }
 }
 
+function pixelSizePrompt() {
+  rowNum = Number(prompt('What size pixels do you want? The larger the number the smaller the pixels. Choose a number 0-100.'));
+  makeGrid();
+}
+
+console.log(rowNum);
+
 makeGrid();
 
-function pixelSizePrompt() {
-  let pixelSize = prompt(
-    "What size pixels do you want? The larger the number the small the pixels."
-  );
-  alert(pixelSize);
-}
-
-function draw() {
-  document.getElementsByClassName("cell");
-  cell.style.backgroundColor = "red";
-}
-document.addEventListener("click", draw);

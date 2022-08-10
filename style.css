@@ -6,8 +6,8 @@
 .cell {
   display: flex;
   border: 1px solid black;
-  width: 20px;
   height: 20px;
+  width: 20px;
   justify-content: center;
 }
 
@@ -21,7 +21,7 @@
   margin-bottom: 50px;
 }
 
-.pixel-size-btn {
+#pixel-size-btn {
   display: flex;
   justify-content: center;
   align-items: center;
