@@ -3,6 +3,14 @@ const btn = document.getElementById('pixel-size-btn')
 
 let rowNum = 16;
 
+// let mouseDown = false;
+// document.body.onmousedown = function() { 
+//   mouseDown = true;
+// }
+// document.body.onmouseup = function() {
+//   mouseDown = false;
+// }
+
 function makeGrid() {
   container.innerHTML = '';
   makeRows(rowNum);
@@ -22,8 +30,10 @@ function makeColumns(rowNum, row) {
   for (let i = 0; i < rowNum; i++) {
     const cell = document.createElement("div");
     cell.addEventListener('mouseover', function() {
-    cell.style.backgroundColor = 'red';
+      cell.style.backgroundColor = 'red';
     });
+    cell.style.height = `${600 / rowNum}px`;
+    cell.style.width = `${600 / rowNum}px`;
     cell.classList.add("cell");
     row.appendChild(cell);
   }
@@ -37,4 +47,3 @@ function pixelSizePrompt() {
 console.log(rowNum);
 
 makeGrid();
-

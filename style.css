@@ -1,19 +1,28 @@
 #container {
   display: flex;
+  margin: auto;
   justify-content: center;
+  align-items: center;
+  background-color: lightgray;
+  height: 600px;
+  width: 600px;
+  border: 1px solid black;
 }
 
-.cell {
+body {
+  background: linear-gradient(to right, rgb(79, 79, 208), rgb(201, 109, 201));
+}
+
+/* .cell {
   display: flex;
-  border: 1px solid black;
   height: 20px;
   width: 20px;
   justify-content: center;
-}
+} */
 
-.cell:hover {
+/* .cell:hover {
   background-color: black;
-}
+} */
 
 .btn-container {
   display: flex;
