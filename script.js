@@ -30,7 +30,7 @@ function makeColumns(rowNum, row) {
   for (let i = 0; i < rowNum; i++) {
     const cell = document.createElement("div");
     cell.addEventListener('mouseover', function() {
-      cell.style.backgroundColor = 'red';
+      cell.style.backgroundColor = 'black';
     });
     cell.style.height = `${600 / rowNum}px`;
     cell.style.width = `${600 / rowNum}px`;
