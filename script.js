@@ -41,7 +41,11 @@ function makeColumns(rowNum, row) {
 
 function pixelSizePrompt() {
   rowNum = Number(prompt('What size pixels do you want? The larger the number the smaller the pixels. Choose a number 0-100.'));
-  makeGrid();
+  if(rowNum) {
+    makeGrid(); 
+  } else {
+    return
+  }
 }
 
 console.log(rowNum);
